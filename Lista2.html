@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
 <body>
-    var num1 = <input type="text"> <br>
-    var num2 = <input type="text"> <br>
-    <button type="button" onclick="validar()">Calcular</button>
+    Primeira numero:<input id="num1" type="number"> <br />
+    Segundo  numero:<input id="num2" type="number"> <br />
+    <button type="button" onclick="validar(document.getElementById('num1').value ,document.getElementById('num2').value)">Calcular</button>
 
 </body>
 <script>
-    var resultado = maior;
-    
+      
     function validar(num1,num2){
         if (num1 > num2 ) {
         alert ("O maior numero é: " + num1);
