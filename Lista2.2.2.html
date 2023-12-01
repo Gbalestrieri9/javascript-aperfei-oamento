@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Título da página</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    nome : <input type="text" id="nome"> <br>
+    nota1 : <input type="number" id="nota1"> <br>
+    nota2 : <input type="number" id="nota2"> <br>
+    nota3 : <input type="number" id="nota3"> <br>
+    nota4 : <input type="number" id="nota4"> <br>
+
+    <button type="button"
+        onclick="somar(document.getElementById('nota1').value,document.getElementById('nota2').value,document.getElementById('nota3').value,document.getElementById('nota4').value)">Calcular</button>
+
+    <div id="tela"></div>
+
+</body>
+
+<script>
+
+    function somar(nota1, nota2, nota3, nota4) {
+
+        calculo1 = (parseInt(nota1) + parseInt(nota2) + parseInt(nota3) + parseInt(nota4));
+        mediaaluno = (calculo1 / 4);
+
+        if (mediaaluno == 10) {
+            document.getElementById("tela").innerHTML = "Aprovado com Distinção"
+        } else if (mediaaluno >= 7) {
+            document.getElementById("tela").innerHTML = "Aprovado"
+        } else if (mediaaluno < 7 & mediaaluno >= 5) {
+            document.getElementById("tela").innerHTML = "Recuperação"
+        } else {
+            mediaaluno < 5
+            document.getElementById("tela").innerHTML = "Reprovado"
+        }
+
+    }
+
+</script>
+
+</html>
